@@ -44,8 +44,7 @@ def formatar_pais(pais):
 # ======================================================
 def criar_recurso_fhir(row):
     """Converte uma linha CSV em JSON no formato FHIR Patient."""
-    observacao = (row.get("Observação") or "").strip()
-
+    
     paciente = {
     "resourceType": "Patient",
     "meta": {
@@ -82,6 +81,11 @@ def criar_recurso_fhir(row):
         {
         "use": "official",
         "text": (row.get("Nome") or "").strip()
+        }
+    ],
+    "text": [
+        {
+        "div": (row.get("Observação") or "").strip()
         }
     ],
     "telecom": [
