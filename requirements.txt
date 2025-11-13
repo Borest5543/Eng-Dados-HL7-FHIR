@@ -1,0 +1,21 @@
+# --- Núcleo Airflow compatível com Python 3.12 ---
+apache-airflow==2.10.2
+
+# --- Providers (sem fixar: pip resolve automaticamente compatíveis) ---
+apache-airflow-providers-apache-spark
+apache-airflow-providers-apache-kafka
+apache-airflow-providers-postgres
+apache-airflow-providers-common-sql
+apache-airflow-providers-http
+
+# --- Outras libs ---
+pyspark==3.5.2
+kafka-python==2.0.2
+psycopg2-binary==2.9.9
+requests==2.32.3
+pendulum==3.0.0
+pyyaml==6.0.2
+tenacity==8.3.0
+
+# --- (opcional mas recomendado para UI do Airflow) ---
+flask-appbuilder>=4.5.0
